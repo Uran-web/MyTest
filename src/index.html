@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Users table</title>
+  </head>
+  <body>
+    <section class="content">
+      <table class="table">
+        <thead>
+          <tr>
+            <th id="name">Name</th>
+            <th id="username">User Name</th>
+            <th id="email">Email</th>
+            <th id="website">Website</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr id="0"></tr>
+        </tbody>
+      </table>
+
+      <div>
+        <form
+          method="POST"
+          id="addUser"
+          class="form"
+          id="user"
+        >
+
+          <label>
+            <p class="form__paragraph">Name:</p>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name:"
+            />
+          </label>
+
+          <label>
+            <p class="form__paragraph">Username:</p>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username:"
+            />
+          </label>
+
+          <label>
+            <p class="form__paragraph">Email:</p>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email:"
+            />
+          </label>
+
+          <label>
+            <p class="form__paragraph">Website:</p>
+            <input
+              type="text"
+              name="website"
+              placeholder="Website:"
+            />
+          </label>
+          
+          <button
+            type="submit"
+            class="form__button"
+            id="button"
+          >
+            Add user
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="../src/api/api.js"></script>
+  <script>
+    function stopDefAction(evt) {
+        evt.preventDefault();
+    }
+    
+    document.getElementById('button').addEventListener(
+        'click', stopDefAction, false
+    );
+    </script>
+</html>
