@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+
+  padding: 10px 0 20px;
+
+  background-color: antiquewhite
+}
+
+.table {
+  border: 1px solid black;
+}
+
+.form__paragraph {
+  margin-bottom: 5px;
+}
